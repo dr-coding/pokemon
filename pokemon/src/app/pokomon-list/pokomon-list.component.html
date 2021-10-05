@@ -1,0 +1,27 @@
+<div class="container" *ngIf="pokemonList && pokemonList.length>0">
+    <div class="filters_div">
+        <input type="text" class="search_text" placeholder="Filter Pokemon" [(ngModel)]="filterObj.searchTxt" (ngModelChange)="filterWithSearch()">
+        <div class="sort_container">
+            <button class="btn btn-grey" [ngClass]="{active:filterObj.sortBy ==='name'}" (click)="sortPokemon('name')">Sort by name</button>
+            <button class="btn btn-grey" [ngClass]="{active:filterObj.sortBy ==='height'}"  (click)="sortPokemon('height')">Sort by height</button>
+            <button class="btn btn-grey" [ngClass]="{active:filterObj.sortBy ==='weight'}"  (click)="sortPokemon('weigth')">sort By weight</button>
+        </div>
+    </div>
+    <div class="card" *ngFor="let pokemon of pokemonList | NameAbility:filterObj.searchTxt">
+        <div class="card_header"><img src="{{pokemon.image}}">
+        <p>{{pokemon.name}}</p></div>
+        <div class="card_content">
+            
+            <div class="padding_bottom_5">
+                <div class="width_50"><label>Height:</label></div> <div class="width_50">{{pokemon.height}}</div>
+            </div>
+            <div class="padding_bottom_5">
+                <div class="width_50"><label>Weight:</label></div> <div class="width_50">{{pokemon.weight}}</div>
+            </div>
+            <div class="padding_bottom_5 flex_align_base">
+                <div class="width_50"><label>abilities:</label></div> <div class="width_50"><ul><li *ngFor="let ability of pokemon.abilities">{{ability?.ability?.name}}</li></ul></div>
+            </div>
+
+        </div>
+    </div>
+</div>

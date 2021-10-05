@@ -1,0 +1,5 @@
+<div>
+  <app-filters (updateRecordsInPage)="updateRecordsInPage($event)" [recordCount]="recordCount" (updateScreen)="updateScreen($event)"[next]="next" [prev]="prev"></app-filters>
+    <app-pokomon-list [pokemonList]="pokemonList" [filterObj]="filterObj" (triggerFilter)="filterList($event)"></app-pokomon-list>
+    <app-filters (updateRecordsInPage)="updateRecordsInPage($event)" [recordCount]="recordCount" (updateScreen)="updateScreen($event)"[next]="next" [prev]="prev"></app-filters>
+  </div>

@@ -1,0 +1,18 @@
+.filter-btns{
+    display:flex;
+    padding:25px;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+::ng-deep .btn{
+    padding: 3px 10px;
+    margin: 0px 10px;
+    background-color: #dde4e9;
+    border: 2px solid #dde4e9;
+    align-self: center;
+    cursor:pointer;
+}
+::ng-deep .btn:hover,.btn:focus,::ng-deep .btn.active{
+    background-color: #c0c6ca;
+}

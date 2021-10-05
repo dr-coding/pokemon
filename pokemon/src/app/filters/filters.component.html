@@ -1,0 +1,7 @@
+<div class="filter-btns"><p>Records per page : </p>
+    <button class="btn btn-grey" [ngClass]="{active:recordCount ===10}" (click)="updateRecordsPage(10)">10</button>
+    <button class="btn btn-grey" [ngClass]="{active:recordCount ===20}"  (click)="updateRecordsPage(20)">20</button>
+    <button class="btn btn-grey" [ngClass]="{active:recordCount ===50}"  (click)="updateRecordsPage(50)">50</button>
+    <button class="btn btn-grey"(click)="screenUpdate(prev)">Prev</button>
+    <button class="btn btn-grey"(click)="screenUpdate(next)">Next</button>
+  </div>

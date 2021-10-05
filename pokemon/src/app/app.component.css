@@ -1,0 +1,7 @@
+::ng-deep .width_100{
+    width:100%;
+}
+::ng-deep .width_50{
+    width:50%;
+    display:inline-block;
+}
